@@ -9,7 +9,12 @@ const HU = {
     });
     return currencyFormat.format(currency);
   },
-  list() {},
-};
+  list(list) {
+    let lastElement=list.pop();
+    let joined = list.join(', ');
+    return `${joined} és ${lastElement}`;
+  }
+}
 
 export default HU;
+
